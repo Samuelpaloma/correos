@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gestión de Pacientes y Medicamentos</title>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+  <h1>Gestión de Medicación</h1>
+
+  <section class="panel">
+    <h2>Registrar Paciente</h2>
+    <input type="text" id="paciente-nombre" placeholder="Nombre" />
+    <input type="text" id="paciente-direccion" placeholder="Dirección" />
+    <input type="text" id="paciente-telefono" placeholder="Teléfono" />
+    <input type="email" id="paciente-email" placeholder="Email" />
+    <button onclick="registrarPaciente()">Registrar Paciente</button>
+  </section>
+
+  <section class="panel">
+    <h2>Registrar Medicamento</h2>
+    <input type="text" id="medicamento-nombre" placeholder="Nombre" />
+    <input type="text" id="medicamento-dosis" placeholder="Dosis" />
+    <input type="text" id="medicamento-horario" placeholder="Horario (ej: 08:00,13:00)" />
+    <button onclick="registrarMedicamento()">Registrar Medicamento</button>
+  </section>
+
+  <section class="panel">
+    <h2>Asignar Medicamento a Paciente</h2>
+    <input type="number" id="asignar-id-paciente" placeholder="ID Paciente" />
+    <input type="number" id="asignar-id-medicamento" placeholder="ID Medicamento" />
+    <button onclick="asignarMedicamento()">Asignar</button>
+  </section>
+
+  <section class="panel">
+    <h2>Confirmación de Toma</h2>
+    <input type="number" id="confirmar-id-paciente" placeholder="ID Paciente" />
+    <input type="number" id="confirmar-id-medicamento" placeholder="ID Medicamento" />
+    <button onclick="confirmarToma()">Confirmar Toma</button>
+  </section>
+
+  <section class="panel">
+    <h2>Bitácora de Recordatorios</h2>
+    <button onclick="cargarBitacora()">Ver Bitácora</button>
+    <ul id="bitacora-lista"></ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
